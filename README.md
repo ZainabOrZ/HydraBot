@@ -1,5 +1,6 @@
 # HydraBot
-My programming NoobStruggles
+
+# My programming NoobStruggles
 This is the same project from https://github.com/ZainabOrZ/MultiUserBot . This was created to better document the changes I will try to implement from now on. I attempted to create this bot using Chris Riot's YouTube video (https://www.youtube.com/watch?v=hoiWxlZ6xHw) and his coding template found here https://github.com/ChrisRiot/simple-twitch-bot
 
 # What I ultimately want: 
