@@ -1,5 +1,5 @@
-import { Client } from 'tmi.js';
-import { channel, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5 } from './settings.json';
+const tmi = require('tmi.js');
+const { channel, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5} = require('./settings.json') ;
 
 const znoobisoptions = {
     options: { debug: true },
@@ -14,7 +14,7 @@ const znoobisoptions = {
     channels: [channel]
 };
 
-const cartmanz_znoobis = new Client(znoobisoptions);
+const cartmanz_znoobis = new tmi.Client(znoobisoptions);
 cartmanz_znoobis.connect().catch(console.error);
 
 cartmanz_znoobis.on('connected', () => {
@@ -45,7 +45,7 @@ const matterstilloptions = {
     channels: [channel]
 };
 
-const blacklivesmatterstill = new Client(matterstilloptions);
+const blacklivesmatterstill = new tmi.Client(matterstilloptions);
 blacklivesmatterstill.connect().catch(console.error);
 
 blacklivesmatterstill.on('connected', () => {
@@ -76,7 +76,7 @@ const danoobiistoptions = {
     channels: [channel]
 };
 
-const danoobiist = new Client(danoobiistoptions);
+const danoobiist = new tmi.Client(danoobiistoptions);
 danoobiist.connect().catch(console.error);
 
 danoobiist.on('connected', () => {
@@ -107,7 +107,7 @@ const majicnoobzoptions = {
     channels: [channel]
 };
 
-const majicnoobz = new Client(majicnoobzoptions);
+const majicnoobz = new tmi.Client(majicnoobzoptions);
 majicnoobz.connect().catch(console.error);
 
 majicnoobz.on('connected', () => {
@@ -138,7 +138,7 @@ const noobzrangeoptions = {
     channels: [channel]
 };
 
-const noobzrange = new Client(noobzrangeoptions);
+const noobzrange = new tmi.Client(noobzrangeoptions);
 noobzrange.connect().catch(console.error);
 
 noobzrange.on('connected', () => {
@@ -169,7 +169,7 @@ const sweetestcandiioptions = {
     channels: [channel]
 };
 
-const sweetestcandii = new Client(sweetestcandiioptions);
+const sweetestcandii = new tmi.Client(sweetestcandiioptions);
 sweetestcandii.connect().catch(console.error);
 
 sweetestcandii.on('connected', () => {
