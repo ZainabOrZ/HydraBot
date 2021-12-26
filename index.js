@@ -57,7 +57,7 @@ const blacklivesmatterstill = new tmi.Client(matterstilloptions);
 blacklivesmatterstill.connect().catch(console.error);
 
 blacklivesmatterstill.on('connected', () => {
-    blacklivesmatterstill.say(channel, `${blacklivesmatterstill} has connected!`);
+    blacklivesmatterstill.say(channel, `user has connected!`);
 });
 
 blacklivesmatterstill.on('message', (channel, user, message) => {
@@ -88,7 +88,7 @@ const danoobiist = new tmi.Client(danoobiistoptions);
 danoobiist.connect().catch(console.error);
 
 danoobiist.on('connected', () => {
-    danoobiist.say(channel, `${danoobiist} has connected!`);
+    danoobiist.say(channel, `user has connected!`);
 });
 
 danoobiist.on('message', (channel, user, message) => {
@@ -119,7 +119,7 @@ const majicnoobz = new tmi.Client(majicnoobzoptions);
 majicnoobz.connect().catch(console.error);
 
 majicnoobz.on('connected', () => {
-    majicnoobz.say(channel, `${majicnoobz} has connected!`);
+    majicnoobz.say(channel, `user has connected!`);
 });
 
 majicnoobz.on('message', (channel, user, message) => {
@@ -150,7 +150,7 @@ const noobzrange = new tmi.Client(noobzrangeoptions);
 noobzrange.connect().catch(console.error);
 
 noobzrange.on('connected', () => {
-    noobzrange.say(channel, `${noobzrange} has connected!`);
+    noobzrange.say(channel, `user has connected!`);
 });
 
 noobzrange.on('message', (channel, user, message) => {
@@ -181,7 +181,7 @@ const sweetestcandii = new tmi.Client(sweetestcandiioptions);
 sweetestcandii.connect().catch(console.error);
 
 sweetestcandii.on('connected', () => {
-    sweetestcandii.say(channel, `${sweetestcandii} has connected!`);
+    sweetestcandii.say(channel, `user has connected!`);
 });
 
 sweetestcandii.on('message', (channel, user, message) => {
@@ -212,7 +212,7 @@ const zainab = new tmi.Client(zainaboptions);
 zainab.connect().catch(console.error);
 
 zainab.on('connected', () => {
-    noobzrange.say(channel, `${zainaborz} has connected!`);
+    noobzrange.say(channel, `user has connected!`);
 });
 
 zainab.on('message', (channel, user, message) => {
