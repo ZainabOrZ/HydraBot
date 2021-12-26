@@ -1,5 +1,5 @@
 const tmi = require('tmi.js');
-const { channel, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5} = require('./settings.json') ;
+const { channel, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5, username6, password6} = require('./settings.json') ;
 
 const znoobisoptions = {
     options: { debug: true },
@@ -39,8 +39,8 @@ const matterstilloptions = {
         secure: true
     },
     identity : {
-        username1,
-        password1      
+        username: username1,
+        password: password1      
     },
     channels: [channel]
 };
@@ -70,8 +70,8 @@ const danoobiistoptions = {
         secure: true
     },
     identity : {
-        username2,
-        password2      
+        username: username2,
+        password: password2      
     },
     channels: [channel]
 };
@@ -101,8 +101,8 @@ const majicnoobzoptions = {
         secure: true
     },
     identity : {
-        username3,
-        password3      
+        username: username3,
+        password: password3      
     },
     channels: [channel]
 };
@@ -132,8 +132,8 @@ const noobzrangeoptions = {
         secure: true
     },
     identity : {
-        username4,
-        password4     
+        username: username4,
+        password: password4     
     },
     channels: [channel]
 };
@@ -163,8 +163,8 @@ const sweetestcandiioptions = {
         secure: true
     },
     identity : {
-        username5,
-        password5      
+        username: username5,
+        password: password5      
     },
     channels: [channel]
 };
@@ -184,5 +184,36 @@ sweetestcandii.on('message', (channel, user, message) => {
 
     if(message.includes("Help fight him by typing !raid") ) {
         sweetestcandii.say(channel, "!raid") ;
-    }
+    }  
 });
+
+const zainaboptions = {
+    options: { debug: true },
+    connection: {
+        reconnect: true,
+        secure: true
+    },
+    identity : {
+        username: username6,
+        password: password6     
+    },
+    channels: [channel]
+};
+
+const zainab = new tmi.Client(zainaboptions);
+zainab.connect().catch(console.error);
+
+zainab.on('connected', () => {
+    noobzrange.say(channel, `${username} has connected!`);
+});
+
+zainab.on('message', (channel, user, message) => {
+      
+    if(message.includes("Type !dungeon to join") ) {
+        zainab.say(channel, "!dungeon");
+    }
+
+    if(message.includes("Help fight him by typing !raid") ) {
+        zainab.say(channel, "!raid") ;
+    }
+});    
