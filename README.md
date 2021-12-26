@@ -10,7 +10,7 @@ This is the same project from https://github.com/ZainabOrZ/MultiUserBot . This w
 One central bot that will respond to a particular channel on twitch using several different user accounts. I would like to automate my part in the stream by having the "bots" respond for me. For example, when the phase "Help fight him by typing !raid" is entered in the chat, I want to bot to recognize it then respond with !raid from all profiles listed
 
 <h2 align="center"> What is happening so far: </h2>
-The code and program works exactly the way it is supposed to when one user is in the code. After I add the other 5 profiles i run node index.js again and I receive an error stating that the bot can not send anonymous messages that I will post for you.
+The code and program works exactly the way it is supposed to when one user is in the code. After I add the other profiles, I ran node index.js again and I receive an error stating that the bot can not send anonymous messages that I will post for you.
 
 <h2 align="center"> The error: </h2>
 PS C:\Users\Owner\OneDrive\Desktop\MultiBot Take 2> node index.js
