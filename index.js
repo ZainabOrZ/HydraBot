@@ -23,11 +23,11 @@ cartmanz_znoobis.on('connected', () => {
 
 cartmanz_znoobis.on('message', (channel, user, message) => {
       
-    if(message.say(!d) ) {
-        cartmanz_znoobis.say(channel, "!dungeon start");
+    if(message == `!d` ) {
+        cartmanz_znoobis.say(channel, `!dungeon start`);
     }
 
-    if(message.say(!r) ) {
+    if(message == `!r` ) {
         cartmanz_znoobis.say(channel, "!raid start");
     }
 
