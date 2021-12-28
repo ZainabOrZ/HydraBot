@@ -38,6 +38,10 @@ cartmanz_znoobis.on('message', (channel, user, message) => {
     if(message == `!r` ) {
         cartmanz_znoobis.say(channel, `!raid`);
     }
+
+    if(message == `!s` ) {
+        cartmanz_znoobis.say(channel, `!scrolls`);
+    }
 });
 
 const matterstilloptions = {
@@ -76,6 +80,10 @@ blacklivesmatterstill.on('message', (channel, user, message) => {
 
     if(message == `!r` ) {
         blacklivesmatterstill.say(channel, `!raid`);
+    }
+
+    if(message == `!s1` ) {
+        blacklivesmatterstill.say(channel, `!scrolls`);
     }
 });
 
@@ -116,6 +124,10 @@ danoobiist.on('message', (channel, user, message) => {
     if(message == `!r` ) {
         danoobiist.say(channel, `!raid`);
     }
+
+    if(message == `!s2` ) {
+        danoobiist.say(channel, `!scrolls`);
+    }
 });
 
 const majicnoobzoptions = {
@@ -154,6 +166,10 @@ majicnoobz.on('message', (channel, user, message) => {
 
     if(message == `!r` ) {
         majicnoobz.say(channel, `!raid`);
+    }
+
+    if(message == `!s3` ) {
+        majicnoobz.say(channel, `!scrolls`);
     }
 });
 
@@ -194,6 +210,10 @@ noobzrange.on('message', (channel, user, message) => {
     if(message == `!r` ) {
         noobzrange.say(channel, `!raid`);
     }
+
+    if(message == `!s4` ) {
+        noobzrange.say(channel, `!scrolls`);
+    }
 });
 
 const sweetestcandiioptions = {
@@ -233,6 +253,10 @@ sweetestcandii.on('message', (channel, user, message) => {
     if(message == `!r` ) {
         sweetestcandii.say(channel, `!raid`);
     }
+
+    if(message == `!s5` ) {
+        sweetestcandii.say(channel, `!scrolls`);
+    }
 });
 
 const zainaboptions = {
@@ -271,5 +295,9 @@ zainab.on('message', (channel, user, message) => {
 
     if(message == `!r` ) {
         zainab.say(channel, `!raid`);
+    }
+
+    if(message == `!s6` ) {
+        zainab.say(channel, `!scrolls`);
     }
 });    
