@@ -28,7 +28,7 @@ cartmanz_znoobis.on('message', (channel, user, message) => {
     }
 
     if(message == `!rs` ) {
-        cartmanz_znoobis.say(channel, "!raid start");
+        cartmanz_znoobis.say(channel, `!raid start`);
     }
 
     if(message == `!d` ) {
@@ -36,7 +36,7 @@ cartmanz_znoobis.on('message', (channel, user, message) => {
     }
 
     if(message == `!r` ) {
-        cartmanz_znoobis.say(channel, `!dungeon`);
+        cartmanz_znoobis.say(channel, `!raid`);
     }
 });
 
