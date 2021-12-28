@@ -191,7 +191,7 @@ sweetestcandii.on('message', (channel, user, message) => {
     }
 
     if(message == `!r` ) {
-        sweetestcandii.say(channel, `!r`);
+        sweetestcandii.say(channel, `!raid`);
     }
 });
 
