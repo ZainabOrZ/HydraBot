@@ -62,6 +62,14 @@ blacklivesmatterstill.on('connected', () => {
 
 blacklivesmatterstill.on('message', (channel, user, message) => {
       
+    if(message == `!ds1` ) {
+        blacklivesmatterstill.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs1` ) {
+        blacklivesmatterstill.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         blacklivesmatterstill.say(channel, `!dungeon`);
     }
@@ -93,6 +101,14 @@ danoobiist.on('connected', () => {
 
 danoobiist.on('message', (channel, user, message) => {
       
+    if(message == `!ds2` ) {
+        danoobiist.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs2` ) {
+        danoobiist.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         danoobiist.say(channel, `!dungeon`);
     }
@@ -124,6 +140,14 @@ majicnoobz.on('connected', () => {
 
 majicnoobz.on('message', (channel, user, message) => {
       
+    if(message == `!ds3` ) {
+        majicnoobz.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs3` ) {
+        majicnoobz.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         majicnoobz.say(channel, `!dungeon`);
     }
@@ -155,6 +179,14 @@ noobzrange.on('connected', () => {
 
 noobzrange.on('message', (channel, user, message) => {
       
+    if(message == `!ds4` ) {
+        noobzrange.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs4` ) {
+        noobzrange.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         noobzrange.say(channel, `!dungeon`);
     }
@@ -186,6 +218,14 @@ sweetestcandii.on('connected', () => {
 
 sweetestcandii.on('message', (channel, user, message) => {
       
+    if(message == `!ds5` ) {
+        sweetestcandii.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs5` ) {
+        sweetestcandii.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         sweetestcandii.say(channel, `!dungeon`);
     }
@@ -217,6 +257,14 @@ zainab.on('connected', () => {
 
 zainab.on('message', (channel, user, message) => {
       
+    if(message == `!ds6` ) {
+        zainab.say(channel, `!dungeon start`);
+    }
+
+    if(message == `!rs6` ) {
+        zainab.say(channel, `!raid start`);
+    }
+    
     if(message == `!d` ) {
         zainab.say(channel, `!dungeon`);
     }
