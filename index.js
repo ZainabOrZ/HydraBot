@@ -23,20 +23,20 @@ cartmanz_znoobis.on('connected', () => {
 
 cartmanz_znoobis.on('message', (channel, user, message) => {
       
-    if(message == `!d` ) {
+    if(message == `!ds` ) {
         cartmanz_znoobis.say(channel, `!dungeon start`);
     }
 
-    if(message == `!r` ) {
+    if(message == `!rs` ) {
         cartmanz_znoobis.say(channel, "!raid start");
     }
 
-    if(message.includes("Type !dungeon to join") ) {
-        cartmanz_znoobis.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        cartmanz_znoobis.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        cartmanz_znoobis.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        cartmanz_znoobis.say(channel, `!dungeon`);
     }
 });
 
@@ -62,12 +62,12 @@ blacklivesmatterstill.on('connected', () => {
 
 blacklivesmatterstill.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        blacklivesmatterstill.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        blacklivesmatterstill.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        blacklivesmatterstill.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        blacklivesmatterstill.say(channel, `!raid`);
     }
 });
 
@@ -93,12 +93,12 @@ danoobiist.on('connected', () => {
 
 danoobiist.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        danoobiist.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        danoobiist.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        danoobiist.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        danoobiist.say(channel, `!raid`);
     }
 });
 
@@ -124,12 +124,12 @@ majicnoobz.on('connected', () => {
 
 majicnoobz.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        majicnoobz.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        majicnoobz.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        majicnoobz.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        majicnoobz.say(channel, `!raid`);
     }
 });
 
@@ -155,12 +155,12 @@ noobzrange.on('connected', () => {
 
 noobzrange.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        noobzrange.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        noobzrange.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        noobzrange.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        noobzrange.say(channel, `!raid`);
     }
 });
 
@@ -186,13 +186,13 @@ sweetestcandii.on('connected', () => {
 
 sweetestcandii.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        sweetestcandii.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        sweetestcandii.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        sweetestcandii.say(channel, "!raid") ;
-    }  
+    if(message == `!r` ) {
+        sweetestcandii.say(channel, `!r`);
+    }
 });
 
 const zainaboptions = {
@@ -212,16 +212,16 @@ const zainab = new tmi.Client(zainaboptions);
 zainab.connect().catch(console.error);
 
 zainab.on('connected', () => {
-    noobzrange.say(channel, `user has connected!`);
+    zainab.say(channel, `user has connected!`);
 });
 
 zainab.on('message', (channel, user, message) => {
       
-    if(message.includes("Type !dungeon to join") ) {
-        zainab.say(channel, "!dungeon");
+    if(message == `!d` ) {
+        zainab.say(channel, `!dungeon`);
     }
 
-    if(message.includes("Help fight him by typing !raid") ) {
-        zainab.say(channel, "!raid") ;
+    if(message == `!r` ) {
+        zainab.say(channel, `!raid`);
     }
 });    
