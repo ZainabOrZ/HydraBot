@@ -27,8 +27,64 @@ cartmanz_znoobis.on('message', (channel, user, message) => {
         cartmanz_znoobis.say(channel, `!dungeon start`);
     }
 
+    if(message == `cartmanz_znoobis You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds1`);
+    }
+
+    if(message == `blm_blacklivesmatterstill You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds2`);
+    }
+
+    if(message == `danoobiist You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds3`);
+    }
+
+    if(message == `majicnoobz You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds4`);
+    }
+
+    if(message == `noobzrange You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds5`);
+    }
+
+    if(message == `sweetestcandii You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `!ds6`);
+    }
+
+    if(message == `zainaborz You do not have any Dungeon Scrolls! Redeem them under streamer loyalty on the website. ` ) {
+        cartmanz_znoobis.say(channel, `sorry folks but it looks like I am out of scrolls :( Please use your own until I buy more`);
+    }
+
     if(message == `!rs` ) {
         cartmanz_znoobis.say(channel, `!raid start`);
+    }
+
+    if(message == `cartmanz_znoobis You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `!rs1`);
+    }
+
+    if(message == `blm_blacklivesmatterstill You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `!rs2`);
+    }
+
+    if(message == `danoobiist You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `!rs3`);
+    }
+
+    if(message == `majicnoobz You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `!rs4`);
+    }
+
+    if(message == `noobzrange You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `!rs5`);
+    }
+
+    if(message == `sweetestcandii You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website. . ` ) {
+        cartmanz_znoobis.say(channel, `!rs6`);
+    }
+
+    if(message == `zainaborz You do not have any Raid Scrolls! Redeem them under streamer loyalty on the website.  ` ) {
+        cartmanz_znoobis.say(channel, `sorry folks but it looks like I am out of scrolls :( Please use your own until I buy more`);
     }
 
     if(message == `!d` ) {
