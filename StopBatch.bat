@@ -1,0 +1,1 @@
+start cmd /c pm2 stop all
