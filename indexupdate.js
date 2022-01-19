@@ -12,6 +12,8 @@ const znoobisoptions = {
         password      
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const cartmanz_znoobis = new tmi.Client(znoobisoptions);
@@ -91,8 +93,24 @@ cartmanz_znoobis.on('message', (channel, user, message) => {
         cartmanz_znoobis.say(channel, `!dungeon`);
     }
 
+    if(message == `!d` ) {
+        cartmanz_znoobis.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        cartmanz_znoobis.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         cartmanz_znoobis.say(channel, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        cartmanz_znoobis.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        cartmanz_znoobis.say(channel2, `!raid`);
     }
 
     if(message == `!s` ) {
@@ -111,6 +129,8 @@ const matterstilloptions = {
         password: password1      
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const blacklivesmatterstill = new tmi.Client(matterstilloptions);
@@ -134,15 +154,30 @@ blacklivesmatterstill.on('message', (channel, user, message) => {
         blacklivesmatterstill.say(channel, `!dungeon`);
     }
 
+    if(message == `!d` ) {
+        blacklivesmatterstill.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        blacklivesmatterstill.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         blacklivesmatterstill.say(channel, `!raid`);
     }
-    
+
+    if(message == `!r` ) {
+        blacklivesmatterstill.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        blacklivesmatterstill.say(channel2, `!raid`);
+    }
+
     if(message == `!s1` ) {
         blacklivesmatterstill.say(channel, `!scrolls`);
     }
 });
-
 
 const danoobiistoptions = {
     options: { debug: true },
@@ -155,6 +190,8 @@ const danoobiistoptions = {
         password: password2      
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const danoobiist = new tmi.Client(danoobiistoptions);
@@ -178,8 +215,24 @@ danoobiist.on('message', (channel, user, message) => {
         danoobiist.say(channel, `!dungeon`);
     }
 
+    if(message == `!d` ) {
+        danoobiist.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        danoobiist.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         danoobiist.say(channel, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        danoobiist.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        danoobiist.say(channel2, `!raid`);
     }
 
     if(message == `!s2` ) {
@@ -198,7 +251,8 @@ const majicnoobzoptions = {
         password: password3      
     },
     channels: [channel], 
-
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const majicnoobz = new tmi.Client(majicnoobzoptions);
@@ -222,9 +276,26 @@ majicnoobz.on('message', (channel, user, message) => {
         majicnoobz.say(channel, `!dungeon`);
     }
 
+    if(message == `!d` ) {
+        majicnoobz.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        majicnoobz.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         majicnoobz.say(channel, `!raid`);
     }
+
+    if(message == `!r` ) {
+        majicnoobz.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        majicnoobz.say(channel2, `!raid`);
+    }
+
     if(message == `!s3` ) {
         majicnoobz.say(channel, `!scrolls`);
     }
@@ -241,6 +312,8 @@ const noobzrangeoptions = {
         password: password4     
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const noobzrange = new tmi.Client(noobzrangeoptions);
@@ -264,8 +337,24 @@ noobzrange.on('message', (channel, user, message) => {
         noobzrange.say(channel, `!dungeon`);
     }
 
+    if(message == `!d` ) {
+        noobzrange.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        noobzrange.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         noobzrange.say(channel, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        noobzrange.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        noobzrange.say(channel2, `!raid`);
     }
 
     if(message == `!s4` ) {
@@ -284,6 +373,8 @@ const sweetestcandiioptions = {
         password: password5      
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const sweetestcandii = new tmi.Client(sweetestcandiioptions);
@@ -306,8 +397,25 @@ sweetestcandii.on('message', (channel, user, message) => {
     if(message == `!d` ) {
         sweetestcandii.say(channel, `!dungeon`);
     }
+
+    if(message == `!d` ) {
+        sweetestcandii.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        sweetestcandii.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         sweetestcandii.say(channel, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        sweetestcandii.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        sweetestcandii.say(channel2, `!raid`);
     }
 
     if(message == `!s5` ) {
@@ -326,6 +434,8 @@ const zainaboptions = {
         password: password6     
     },
     channels: [channel], 
+    channels: [channel1],
+    channels: [channel2],
 };
 
 const zainab = new tmi.Client(zainaboptions);
@@ -348,9 +458,27 @@ zainab.on('message', (channel, user, message) => {
     if(message == `!d` ) {
         zainab.say(channel, `!dungeon`);
     }
+
+    if(message == `!d` ) {
+        zainab.say(channel1, `!dungeon`);
+    }
+
+    if(message == `!d` ) {
+        zainab.say(channel2, `!dungeon`);
+    }
+
     if(message == `!r` ) {
         zainab.say(channel, `!raid`);
     }
+
+    if(message == `!r` ) {
+        zainab.say(channel1, `!raid`);
+    }
+
+    if(message == `!r` ) {
+        zainab.say(channel2, `!raid`);
+    }
+
     if(message == `!s6` ) {
         zainab.say(channel, `!scrolls`);
     }
@@ -367,6 +495,32 @@ const noobizbotoptions = {
         password: password7      
         },
     
-        channels: [channel1, channel2],
+        channels: [channel1],
+        channels: [channel2],
     };
     
+    const noobizbot = new tmi.Client(noobizbotoptions);
+    noobizbot.connect().catch(console.error);
+    
+    noobizbot.on('connected', () => {
+        noobizbot.say(channel, `user has connected!`);
+    });
+    
+    noobizbot.on('message', (channel, user, message) => {
+                       
+        if(message == `!d` ) {
+            noobizbot.say(channel1, `!dungeon`);
+        }
+    
+        if(message == `!d` ) {
+            noobizbot.say(channel2, `!dungeon`);
+        }
+             
+        if(message == `!r` ) {
+            noobizbot.say(channel1, `!raid`);
+        }
+    
+        if(message == `!r` ) {
+            noobizbot.say(channel2, `!raid`);
+        }
+    });
