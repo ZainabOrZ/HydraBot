@@ -1,5 +1,5 @@
 const tmi = require('tmi.js');
-const { channel, channel1, channel2, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5, username6, password6} = require('./settings.json') ;
+const { channel, channel1, channel2, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5, username6, password6, username7, password7} = require('./settings.json') ;
 
 const znoobisoptions = {
     options: { debug: true },
@@ -484,15 +484,15 @@ zainab.on('message', (channel, user, message) => {
     }
 });
 
-    const noobizbotoptions = {
-        options: { debug: true },
-        connection: {
-            reconnect: true,
-            secure: true
+const noobizbotoptions = {
+    options: { debug: true },
+    connection: {
+        reconnect: true,
+        secure: true
         },
-        identity : {
-            username: username7,
-            password: password7      
+    identity : {
+        username: username7,
+        password: password7      
         },
     
         channels: [channel1],
