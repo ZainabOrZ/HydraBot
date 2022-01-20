@@ -18,12 +18,12 @@ const znoobisoptions = {
     const znoobis = new tmi.Client(znoobisoptions);
     znoobis.connect().catch(console.error);
 
-    cartmanz_znoobis.on('connected', () => {
-        cartmanz_znoobis.say(channel, `Noob squad here!`);
+    znoobis.on('connected', () => {
+        znoobis.say(channel, `Noob squad here!`);
     
 });
     
-cartmanz_znoobis.on('message', (chan, user, message) => {
+znoobis.on('message', (chan, user, message) => {
 
     let isSub = user.subscriber;
     let isVIP = false;
@@ -44,7 +44,7 @@ cartmanz_znoobis.on('message', (chan, user, message) => {
     if (chan == channel) {
         
         if (message == "!ds") {
-            cartmanz_znoobis.say(channel, "!dungeon start");
+            znoobis.say(channel, "!dungeon start");
         }
 
         if(message.startsWith(`cartmanz_znoobis, You do not have any Dungeon Scrolls!`)){
@@ -66,10 +66,10 @@ cartmanz_znoobis.on('message', (chan, user, message) => {
             zainab.say(channel, `!dungeon start`);
         }
         if(message.startsWith(`zainaborz, You do not have any Dungeon Scrolls!`)){
-            cartmanz_znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
+            znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
         if (message == "!rs") {
-            cartmanz_znoobis.say(channel, "!raid start");
+           znoobis.say(channel, "!raid start");
         }
 
         if(message.startsWith(`cartmanz_znoobis, You do not have any Raid Scrolls!`)){
@@ -91,14 +91,14 @@ cartmanz_znoobis.on('message', (chan, user, message) => {
             zainab.say(channel, `!raid start`);
         }
         if(message.startsWith(`zainaborz, You do not have any Raid Scrolls!`)){
-            cartmanz_znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
+            znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
 
         if (message == "!d") {
-            cartmanz_znoobis.say(channel, "!dungeon");
+            znoobis.say(channel, "!dungeon");
         }
         if (message == "!r") {
-            cartmanz_znoobis.say(channel, "!raid");
+            znoobis.say(channel, "!raid");
         }
         if (user.username.toLowerCase() == channelbot.toLowerCase() || user.username.toLowerCase() == "ravenfallofficial"){
             if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
@@ -124,10 +124,10 @@ cartmanz_znoobis.on('message', (chan, user, message) => {
     //Raven Channel
     else if (chan == channel1){
         if (message == "!d") {
-            cartmanz_znoobis.say(channel1, "!dungeon");
+            znoobis.say(channel1, "!dungeon");
         }
         if (message == "!r") {
-            cartmanz_znoobis.say(channel1, "!raid");
+            znoobis.say(channel1, "!raid");
         }
         if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
             setTimeout(function(){blm.say(channel1,"!dungeon")},500);
@@ -152,10 +152,10 @@ cartmanz_znoobis.on('message', (chan, user, message) => {
     //BigTwo Channel
     else if (chan == channel2){
         if (message == "!d") {
-            cartmanz_znoobis.say(channel2, "!dungeon");
+            znoobis.say(channel2, "!dungeon");
         }
         if (message == "!r") {
-            cartmanz_znoobis.say(channel2, "!raid");
+            znoobis.say(channel2, "!raid");
         }
         if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
             setTimeout(function(){blm.say(channel2,"!dungeon")},500);
