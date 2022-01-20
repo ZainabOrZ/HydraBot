@@ -153,34 +153,27 @@ znoobis.on('message', (channel, user, message) => {
     }
 
     //BigTwo Channel
+    //BigTwo has issues where the bot does not announce that I(ZNoobis) joined raids or dungeons. Hopefully this will let my characters join just by the command
     else if (channel.toLowerCase() == channel3){
         if (message == "!d") {
             znoobis.say(channel3, "!dungeon");
+            setTimeout(function(){blm.say(channel3,"!dungeon")},500);
+            setTimeout(function(){danoobiist.say(channel3,"!dungeon")},1000);
+            setTimeout(function(){majicnoobz.say(channel3,"!dungeon")},1500);
+            setTimeout(function(){noobzrange.say(channel3,"!dungeon")},2000);
+            setTimeout(function(){sweetestcandii.say(channel3,"!dungeon")},2500);
+            setTimeout(function(){zainab.say(channel3,"!dungeon")},3000);
+            setTimeout(function(){noobizbot.say(channel3,"!dungeon")},3500);
         }
         if (message == "!r") {
             znoobis.say(channel3, "!raid");
-        }
-
-        if (user.username == channelbot3.toLowerCase() || user.username == "ravenfallofficial"){
-
-            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
-                setTimeout(function(){blm.say(channel3,"!dungeon")},500);
-                setTimeout(function(){danoobiist.say(channel3,"!dungeon")},1000);
-                setTimeout(function(){majicnoobz.say(channel3,"!dungeon")},1500);
-                setTimeout(function(){noobzrange.say(channel3,"!dungeon")},2000);
-                setTimeout(function(){sweetestcandii.say(channel3,"!dungeon")},2500);
-                setTimeout(function(){zainab.say(channel3,"!dungeon")},3000);
-                setTimeout(function(){noobizbot.say(channel3,"!dungeon")},3500);
-            }
-            if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
-                setTimeout(function(){blm.say(channel3,"!raid")},500);
-                setTimeout(function(){danoobiist.say(channel3,"!raid")},1000);
-                setTimeout(function(){majicnoobz.say(channel3,"!raid")},1500);
-                setTimeout(function(){noobzrange.say(channel3,"!raid")},2000);
-                setTimeout(function(){sweetestcandii.say(channel3,"!raid")},2500);
-                setTimeout(function(){zainab.say(channel3,"!raid")},3000);
-                setTimeout(function(){noobizbot.say(channel3,"!raid")},3500);
-            }
+            setTimeout(function(){blm.say(channel3,"!raid")},500);
+            setTimeout(function(){danoobiist.say(channel3,"!raid")},1000);
+            setTimeout(function(){majicnoobz.say(channel3,"!raid")},1500);
+            setTimeout(function(){noobzrange.say(channel3,"!raid")},2000);
+            setTimeout(function(){sweetestcandii.say(channel3,"!raid")},2500);
+            setTimeout(function(){zainab.say(channel3,"!raid")},3000);
+            setTimeout(function(){noobizbot.say(channel3,"!raid")},3500);
         }
     }
 });

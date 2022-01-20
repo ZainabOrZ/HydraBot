@@ -1,5 +1,13 @@
 {
-    "channel" :  "cartmanz_znoobis",
+    "channel1" : "#cartmanz_znoobis",
+    "channelbot1" : "noobizbot",
+
+    "channel2" : "#ravenmmo",
+    "channelbot2" : "ravenmmobot",
+
+    "channel3" : "#bigtwo_02",
+    "channelbot3" : "",
+
     "username" : "cartmanz_znoobis",
     "password" : "PRIVATE",
    
