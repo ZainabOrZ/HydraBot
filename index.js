@@ -34,7 +34,7 @@ znoobis.on('message', (chan, user, message) => {
         }
     }    catch(error){}
     let isMod = user.mod || user['user-type'] === 'mod';
-    let isBroadcaster = channel.slice(1) === user.username;
+    let isBroadcaster = chan.slice(1) === user.username;
     let isSubUp = isSub || isVIP || isMod || isBroadcaster;
     let isVIPUp = isVIP || isMod || isBroadcaster;
     let isModUp = isMod || isBroadcaster;
