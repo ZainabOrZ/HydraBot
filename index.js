@@ -1,5 +1,5 @@
 const tmi = require('tmi.js');
-const { channel, channelbot, channel1, channelbot1, channel2, channelbot2, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5, username6, password6, username7, password7} = require('./settings.json') ;
+const { channel1, channelbot1, channel2, channelbot2, channel3, channelbot3, username, password, username1, password1, username2, password2, username3, password3, username4, password4, username5, password5, username6, password6, username7, password7} = require('./settings.json') ;
 
 const znoobisoptions = {
     options: { debug: true },
@@ -12,18 +12,18 @@ const znoobisoptions = {
         password: password     
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const znoobis = new tmi.Client(znoobisoptions);
     znoobis.connect().catch(console.error);
 
     znoobis.on('connected', () => {
-        znoobis.say(channel, `Noob squad here!`);
+        znoobis.say(channel1, `Noob squad here!`);
     
 });
     
-znoobis.on('message', (chan, user, message) => {
+znoobis.on('message', (channel, user, message) => {
 
     let isSub = user.subscriber;
     let isVIP = false;
@@ -34,146 +34,153 @@ znoobis.on('message', (chan, user, message) => {
         }
     }    catch(error){}
     let isMod = user.mod || user['user-type'] === 'mod';
-    let isBroadcaster = chan.slice(1) === user.username;
+    let isBroadcaster = channel.slice(1) === user.username;
     let isSubUp = isSub || isVIP || isMod || isBroadcaster;
     let isVIPUp = isVIP || isMod || isBroadcaster;
     let isModUp = isMod || isBroadcaster;
  
 
     //My Channel
-    if (chan == channel) {
+    if (channel.toLowerCase() == channel1) {
         
         if (message == "!ds") {
-            znoobis.say(channel, "!dungeon start");
+            znoobis.say(channel1, "!dungeon start");
         }
 
         if(message.startsWith(`cartmanz_znoobis, You do not have any Dungeon Scrolls!`)){
-            blm.say(channel, `!dungeon start`);
+            blm.say(channel1, `!dungeon start`);
         }
         if(message.startsWith(`blm_blacklivesmatterstill, You do not have any Dungeon Scrolls!`)){
-            danoobiist.say(channel, `!dungeon start`);
+            danoobiist.say(channel1, `!dungeon start`);
         }
         if(message.startsWith(`danoobiist, You do not have any Dungeon Scrolls!`)){
-            majicnoobz.say(channel, `!dungeon start`);
+            majicnoobz.say(channel1, `!dungeon start`);
         }
-        if(message.startsWith(`maicnoobz, You do not have any Dungeon Scrolls!`)){
-            noobzrange.say(channel, `!dungeon start`);
+        if(message.startsWith(`majicnoobz, You do not have any Dungeon Scrolls!`)){
+            noobzrange.say(channel1, `!dungeon start`);
         }
         if(message.startsWith(`noobzrange, You do not have any Dungeon Scrolls!`)){
-            sweetestcandii.say(channel, `!dungeon start`);
+            sweetestcandii.say(channel1, `!dungeon start`);
         }
         if(message.startsWith(`sweestcandii, You do not have any Dungeon Scrolls!`)){
-            zainab.say(channel, `!dungeon start`);
+            zainab.say(channel1, `!dungeon start`);
         }
         if(message.startsWith(`zainaborz, You do not have any Dungeon Scrolls!`)){
-            znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
+            znoobis.say(channel1, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
         if (message == "!rs") {
-           znoobis.say(channel, "!raid start");
+           znoobis.say(channel1, "!raid start");
         }
 
         if(message.startsWith(`cartmanz_znoobis, You do not have any Raid Scrolls!`)){
-            blm.say(channel, `!raid start`);
+            blm.say(channel1, `!raid start`);
         }
         if(message.startsWith(`blm_blacklivesmatterstill, You do not have any Raid Scrolls!`)){
-            danoobiist.say(channel, `!raid start`);
+            danoobiist.say(channel1, `!raid start`);
         }
         if(message.startsWith(`danoobiist, You do not have any Raid Scrolls!`)){
-            majicnoobz.say(channel, `!raid start`);
+            majicnoobz.say(channel1, `!raid start`);
         }
         if(message.startsWith(`maicnoobz, You do not have any Raid Scrolls!`)){
-            noobzrange.say(channel, `!raid start`);
+            noobzrange.say(channel1, `!raid start`);
         }
         if(message.startsWith(`noobzrange, You do not have any Raid Scrolls!`)){
-            sweetestcandii.say(channel, `!raid start`);
+            sweetestcandii.say(channel1, `!raid start`);
         }
         if(message.startsWith(`sweestcandii, You do not have any Raid Scrolls!`)){
-            zainab.say(channel, `!raid start`);
+            zainab.say(channel1, `!raid start`);
         }
         if(message.startsWith(`zainaborz, You do not have any Raid Scrolls!`)){
-            znoobis.say(channel, `looks like you are going to have to use your own scrolls, because I'm out :(`);
+            znoobis.say(channel1, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
 
-        if (message == "!d") {
-            znoobis.say(channel, "!dungeon");
-        }
-        if (message == "!r") {
-            znoobis.say(channel, "!raid");
-        }
-        if (user.username.toLowerCase() == channelbot.toLowerCase() || user.username.toLowerCase() == "ravenfallofficial"){
-            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
-                setTimeout(function(){blm.say(channel,"!dungeon")},500);
-                setTimeout(function(){danoobiist.say(channel,"!dungeon")},1000);
-                setTimeout(function(){majicnoobz.say(channel,"!dungeon")},1500);
-                setTimeout(function(){noobzrange.say(channel,"!dungeon")},2000);
-                setTimeout(function(){sweetestcandii.say(channel,"!dungeon")},2500);
-                setTimeout(function(){zainab.say(channel,"!dungeon")},3000);
-            } 
-        
-            if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
-                setTimeout(function(){blm.say(channel,"!raid")},500);
-                setTimeout(function(){danoobiist.say(channel,"!raid")},1000);
-                setTimeout(function(){majicnoobz.say(channel,"!raid")},1500);
-                setTimeout(function(){noobzrange.say(channel,"!raid")},2000);
-                setTimeout(function(){sweetestcandii.say(channel,"!raid")},2500);
-                setTimeout(function(){zainab.say(channel,"!raid")},3000);
-            }
-        }
-    }
-
-    //Raven Channel
-    else if (chan == channel1){
         if (message == "!d") {
             znoobis.say(channel1, "!dungeon");
         }
         if (message == "!r") {
             znoobis.say(channel1, "!raid");
         }
-        if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
-            setTimeout(function(){blm.say(channel1,"!dungeon")},500);
-            setTimeout(function(){danoobiist.say(channel,"!dungeon")},1000);
-            setTimeout(function(){majicnoobz.say(channel1,"!dungeon")},1500);
-            setTimeout(function(){noobzrange.say(channel1,"!dungeon")},2000);
-            setTimeout(function(){sweetestcandii.say(channel1,"!dungeon")},2500);
-            setTimeout(function(){zainab.say(channel1,"!dungeon")},3000);
-            setTimeout(function(){noobizbot.say(channel1,"!dungeon")},3500);
-        }
-        if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
-            setTimeout(function(){blm.say(channel1,"!raid")},500);
-            setTimeout(function(){danoobiist.say(channel1,"!raid")},1000);
-            setTimeout(function(){majicnoobz.say(channel1,"!raid")},1500);
-            setTimeout(function(){noobzrange.say(channel1,"!raid")},2000);
-            setTimeout(function(){sweetestcandii.say(channel1,"!raid")},2500);
-            setTimeout(function(){zainab.say(channel1,"!raid")},3000);
-            setTimeout(function(){noobizbot.say(channel1,"!raid")},3500);
+        if (user.username == channelbot1.toLowerCase() || user.username == "ravenfallofficial"){
+            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
+                setTimeout(function(){blm.say(channel1,"!dungeon")},500);
+                setTimeout(function(){danoobiist.say(channel1,"!dungeon")},1000);
+                setTimeout(function(){majicnoobz.say(channel1,"!dungeon")},1500);
+                setTimeout(function(){noobzrange.say(channel1,"!dungeon")},2000);
+                setTimeout(function(){sweetestcandii.say(channel1,"!dungeon")},2500);
+                setTimeout(function(){zainab.say(channel1,"!dungeon")},3000);
+            } 
+        
+            if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
+                setTimeout(function(){blm.say(channel1,"!raid")},500);
+                setTimeout(function(){danoobiist.say(channel1,"!raid")},1000);
+                setTimeout(function(){majicnoobz.say(channel1,"!raid")},1500);
+                setTimeout(function(){noobzrange.say(channel1,"!raid")},2000);
+                setTimeout(function(){sweetestcandii.say(channel1,"!raid")},2500);
+                setTimeout(function(){zainab.say(channel1,"!raid")},3000);
+            }
         }
     }
 
-    //BigTwo Channel
-    else if (chan == channel2){
+    //Raven Channel
+    else if (channel.toLowerCase() == channel2){
         if (message == "!d") {
             znoobis.say(channel2, "!dungeon");
         }
         if (message == "!r") {
             znoobis.say(channel2, "!raid");
         }
-        if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
-            setTimeout(function(){blm.say(channel2,"!dungeon")},500);
-            setTimeout(function(){danoobiist.say(channel2,"!dungeon")},1000);
-            setTimeout(function(){majicnoobz.say(channel2,"!dungeon")},1500);
-            setTimeout(function(){noobzrange.say(channel2,"!dungeon")},2000);
-            setTimeout(function(){sweetestcandii.say(channel2,"!dungeon")},2500);
-            setTimeout(function(){zainab.say(channel2,"!dungeon")},3000);
-            setTimeout(function(){noobizbot.say(channel2,"!dungeon")},3500);
+
+        if (user.username == channelbot2.toLowerCase() || user.username == "ravenfallofficial"){
+            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
+                setTimeout(function(){blm.say(channel2,"!dungeon")},500);
+                setTimeout(function(){danoobiist.say(channel2,"!dungeon")},1000);
+                setTimeout(function(){majicnoobz.say(channel2,"!dungeon")},1500);
+                setTimeout(function(){noobzrange.say(channel2,"!dungeon")},2000);
+                setTimeout(function(){sweetestcandii.say(channel2,"!dungeon")},2500);
+                setTimeout(function(){zainab.say(channel2,"!dungeon")},3000);
+                setTimeout(function(){noobizbot.say(channel2,"!dungeon")},3500);
+            }
+            if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
+                setTimeout(function(){blm.say(channel2,"!raid")},500);
+                setTimeout(function(){danoobiist.say(channel2,"!raid")},1000);
+                setTimeout(function(){majicnoobz.say(channel2,"!raid")},1500);
+                setTimeout(function(){noobzrange.say(channel2,"!raid")},2000);
+                setTimeout(function(){sweetestcandii.say(channel2,"!raid")},2500);
+                setTimeout(function(){zainab.say(channel2,"!raid")},3000);
+                setTimeout(function(){noobizbot.say(channel2,"!raid")},3500);
+            }
+        } 
+    }
+
+    //BigTwo Channel
+    else if (channel.toLowerCase() == channel3){
+        if (message == "!d") {
+            znoobis.say(channel3, "!dungeon");
         }
-        if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
-            setTimeout(function(){blm.say(channel2,"!raid")},500);
-            setTimeout(function(){danoobiist.say(channel2,"!raid")},1000);
-            setTimeout(function(){majicnoobz.say(channel2,"!raid")},1500);
-            setTimeout(function(){noobzrange.say(channel2,"!raid")},2000);
-            setTimeout(function(){sweetestcandii.say(channel2,"!raid")},2500);
-            setTimeout(function(){zainab.say(channel2,"!raid")},3000);
-            setTimeout(function(){noobizbot.say(channel2,"!raid")},3500);
+        if (message == "!r") {
+            znoobis.say(channel3, "!raid");
+        }
+
+        if (user.username == channelbot3.toLowerCase() || user.username == "ravenfallofficial"){
+
+            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")){
+                setTimeout(function(){blm.say(channel3,"!dungeon")},500);
+                setTimeout(function(){danoobiist.say(channel3,"!dungeon")},1000);
+                setTimeout(function(){majicnoobz.say(channel3,"!dungeon")},1500);
+                setTimeout(function(){noobzrange.say(channel3,"!dungeon")},2000);
+                setTimeout(function(){sweetestcandii.say(channel3,"!dungeon")},2500);
+                setTimeout(function(){zainab.say(channel3,"!dungeon")},3000);
+                setTimeout(function(){noobizbot.say(channel3,"!dungeon")},3500);
+            }
+            if (message.startsWith("cartmanz_znoobis, You have joined the raid")){
+                setTimeout(function(){blm.say(channel3,"!raid")},500);
+                setTimeout(function(){danoobiist.say(channel3,"!raid")},1000);
+                setTimeout(function(){majicnoobz.say(channel3,"!raid")},1500);
+                setTimeout(function(){noobzrange.say(channel3,"!raid")},2000);
+                setTimeout(function(){sweetestcandii.say(channel3,"!raid")},2500);
+                setTimeout(function(){zainab.say(channel3,"!raid")},3000);
+                setTimeout(function(){noobizbot.say(channel3,"!raid")},3500);
+            }
         }
     }
 });
@@ -189,7 +196,7 @@ const blmoptions = {
         password: password1      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const blm = new tmi.Client(blmoptions);
@@ -206,7 +213,7 @@ const danoobiistoptions = {
         password: password2      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const danoobiist = new tmi.Client(danoobiistoptions);
@@ -223,7 +230,7 @@ const majicnoobzoptions = {
         password: password3      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const majicnoobz = new tmi.Client(majicnoobzoptions);
@@ -240,7 +247,7 @@ const noobzrangeoptions = {
         password: password4      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const noobzrange = new tmi.Client(noobzrangeoptions);
@@ -257,7 +264,7 @@ const sweetestcandiioptions = {
         password: password5      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const sweetestcandii = new tmi.Client(sweetestcandiioptions);
@@ -274,7 +281,7 @@ const zainaboptions = {
         password: password6      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const zainab = new tmi.Client(zainaboptions);
@@ -291,7 +298,7 @@ const noobizbotoptions = {
         password: password7      
         },
     
-        channels: [channel, channel1, channel2],
+        channels: [channel1, channel2, channel3],
     };
     
     const noobizbot = new tmi.Client(noobizbotoptions);
