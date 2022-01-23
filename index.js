@@ -128,6 +128,19 @@ znoobis.on('message', (channel, user, message) => {
                 setTimeout(function() { zainab.say(channel1, "!raid") }, 3000);
             }
         }
+        if (user.username == "cartmanz_znoobis") {
+            if (message == "!ja") {
+                znoobis.say(channel1, "!join 2");
+                blm.say(channel1, "!join");
+                danoobiist.say(channel1, "!join 2");
+                majicnoobz.say(channel1, "!join");
+                noobzrange.say(channel1, "!join");
+                sweetestcandii.say(channel1, "!join");
+                zainab.say(channel1, "!join");
+                noobizbot.say(channel1, "!join");
+            }
+        }
+
     }
 
     //Raven Channel
@@ -157,6 +170,18 @@ znoobis.on('message', (channel, user, message) => {
                 setTimeout(function() { sweetestcandii.say(channel2, "!raid") }, 2500);
                 setTimeout(function() { zainab.say(channel2, "!raid") }, 3000);
                 setTimeout(function() { noobizbot.say(channel2, "!raid") }, 3500);
+            }
+        }
+        if (user.username == "cartmanz_znoobis") {
+            if (message == "!ja") {
+                znoobis.say(channel2, "!join");
+                blm.say(channel2, "!join 2");
+                danoobiist.say(channel2, "!join");
+                majicnoobz.say(channel2, "!join 2");
+                noobzrange.say(channel2, "!join 2");
+                sweetestcandii.say(channel2, "!join 2");
+                zainab.say(channel2, "!join 2");
+                noobizbot.say(channel2, "!join 2");
             }
         }
     }
@@ -203,6 +228,18 @@ znoobis.on('message', (channel, user, message) => {
             setTimeout(function() { sweetestcandii.say(channel3, "!train magic") }, 2500);
             setTimeout(function() { zainab.say(channel3, "!train magic") }, 3000);
             setTimeout(function() { noobizbot.say(channel3, "!train magic") }, 3500);
+        }
+        if (user.username == "cartmanz_znoobis") {
+            if (message == "!ja") {
+                znoobis.say(channel3, "!join 3");
+                blm.say(channel3, "!join 3");
+                danoobiist.say(channel3, "!join 3");
+                majicnoobz.say(channel3, "!join 3");
+                noobzrange.say(channel3, "!join 3");
+                sweetestcandii.say(channel3, "!join 3");
+                zainab.say(channel3, "!join 3");
+                noobizbot.say(channel3, "!join 3");
+            }
         }
     }
 });
