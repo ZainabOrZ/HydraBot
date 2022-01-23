@@ -92,6 +92,16 @@ znoobis.on('message', (channel, user, message) => {
         if (message.startsWith(`zainaborz, You do not have any Raid Scrolls!`)) {
             znoobis.say(channel1, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
+        if (message == "!sa") {
+            znoobis.say(channel1, "!scrolls");
+            setTimeout(function() { blm.say(channel1, "!scrolls"); }, 1500);
+            setTimeout(function() { danoobiist.say(channel1, "!scrolls"); }, 2000);
+            setTimeout(function() { majicnoobz.say(channel1, "!scrolls"); }, 3500);
+            setTimeout(function() { noobzrange.say(channel1, "!scrolls"); }, 4000);
+            setTimeout(function() { sweetestcandii.say(channel1, "!scrolls"); }, 5500);
+            setTimeout(function() { zainab.say(channel1, "!scrolls"); }, 7000);
+            setTimeout(function() { noobizbot.say(channel1, "!scrolls"); }, 9500);
+        }
 
         if (message == "!d") {
             znoobis.say(channel1, "!dungeon");
