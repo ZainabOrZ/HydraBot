@@ -99,16 +99,38 @@ znoobis.on('message', (channel, user, message) => {
         if (message == "!r") {
             znoobis.say(channel1, "!raid");
         }
-        if (message == "!tf") {
-            znoobis.say(channel1, "!train farming");
-            setTimeout(function() { blm.say(channel1, "!train farming") }, 500);
-            setTimeout(function() { danoobiist.say(channel1, "!train farming") }, 1000);
-            setTimeout(function() { majicnoobz.say(channel1, "!train farming") }, 1500);
-            setTimeout(function() { noobzrange.say(channel1, "!train farming") }, 2000);
-            setTimeout(function() { sweetestcandii.say(channel1, "!train farming") }, 2500);
-            setTimeout(function() { zainab.say(channel1, "!train farming") }, 3000);
-            setTimeout(function() { noobizbot.say(channel1, "!train farming") }, 3500);
+
+        if (user.username == "cartmanz_znoobis") {
+            if (message == "!ja") {
+                znoobis.say(channel1, "!join 2");
+                blm.say(channel1, "!join");
+                danoobiist.say(channel1, "!join 2");
+                majicnoobz.say(channel1, "!join");
+                noobzrange.say(channel1, "!join");
+                sweetestcandii.say(channel1, "!join");
+                zainab.say(channel1, "!join");
+                noobizbot.say(channel1, "!join");
+            }
+            if (message == "!tf") {
+                znoobis.say(channel1, "!train farming");
+                setTimeout(function() { blm.say(channel1, "!train farming") }, 500);
+                setTimeout(function() { danoobiist.say(channel1, "!train farming") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel1, "!train farming") }, 1500);
+                setTimeout(function() { noobzrange.say(channel1, "!train farming") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel1, "!train farming") }, 2500);
+                setTimeout(function() { zainab.say(channel1, "!train farming") }, 3000);
+            }
+            if (message == "!tn") {
+                znoobis.say(channel1, "!train all");
+                setTimeout(function() { blm.say(channel1, "!train crafting") }, 500);
+                setTimeout(function() { danoobiist.say(channel1, "!train farming") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel1, "!train magic") }, 1500);
+                setTimeout(function() { noobzrange.say(channel1, "!train range") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel1, "!train healing") }, 2500);
+                setTimeout(function() { zainab.say(channel1, "!train healing") }, 3000);
+            }
         }
+
         if (user.username == channelbot1.toLowerCase() || user.username == "ravenfallofficial") {
             if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")) {
                 setTimeout(function() { blm.say(channel1, "!dungeon") }, 500);
@@ -128,19 +150,6 @@ znoobis.on('message', (channel, user, message) => {
                 setTimeout(function() { zainab.say(channel1, "!raid") }, 3000);
             }
         }
-        if (user.username == "cartmanz_znoobis") {
-            if (message == "!ja") {
-                znoobis.say(channel1, "!join 2");
-                blm.say(channel1, "!join");
-                danoobiist.say(channel1, "!join 2");
-                majicnoobz.say(channel1, "!join");
-                noobzrange.say(channel1, "!join");
-                sweetestcandii.say(channel1, "!join");
-                zainab.say(channel1, "!join");
-                noobizbot.say(channel1, "!join");
-            }
-        }
-
     }
 
     //Raven Channel
@@ -209,27 +218,27 @@ znoobis.on('message', (channel, user, message) => {
             setTimeout(function() { zainab.say(channel3, "!raid") }, 3000);
             setTimeout(function() { noobizbot.say(channel3, "!raid") }, 3500);
         }
-        if (message == "!ta") {
-            znoobis.say(channel3, "!train all");
-            setTimeout(function() { blm.say(channel3, "!train all") }, 500);
-            setTimeout(function() { danoobiist.say(channel3, "!train all") }, 1000);
-            setTimeout(function() { majicnoobz.say(channel3, "!train all") }, 1500);
-            setTimeout(function() { noobzrange.say(channel3, "!train all") }, 2000);
-            setTimeout(function() { sweetestcandii.say(channel3, "!train all") }, 2500);
-            setTimeout(function() { zainab.say(channel3, "!train all") }, 3000);
-            setTimeout(function() { noobizbot.say(channel3, "!train all") }, 3500);
-        }
-        if (message == "!tm") {
-            znoobis.say(channel3, "!train magic");
-            setTimeout(function() { blm.say(channel3, "!train magic") }, 500);
-            setTimeout(function() { danoobiist.say(channel3, "!train magic") }, 1000);
-            setTimeout(function() { majicnoobz.say(channel3, "!train magic") }, 1500);
-            setTimeout(function() { noobzrange.say(channel3, "!train magic") }, 2000);
-            setTimeout(function() { sweetestcandii.say(channel3, "!train magic") }, 2500);
-            setTimeout(function() { zainab.say(channel3, "!train magic") }, 3000);
-            setTimeout(function() { noobizbot.say(channel3, "!train magic") }, 3500);
-        }
         if (user.username == "cartmanz_znoobis") {
+            if (message == "!ta") {
+                znoobis.say(channel3, "!train all");
+                setTimeout(function() { blm.say(channel3, "!train all") }, 500);
+                setTimeout(function() { danoobiist.say(channel3, "!train all") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel3, "!train all") }, 1500);
+                setTimeout(function() { noobzrange.say(channel3, "!train all") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel3, "!train all") }, 2500);
+                setTimeout(function() { zainab.say(channel3, "!train all") }, 3000);
+                setTimeout(function() { noobizbot.say(channel3, "!train all") }, 3500);
+            }
+            if (message == "!tm") {
+                znoobis.say(channel3, "!train magic");
+                setTimeout(function() { blm.say(channel3, "!train magic") }, 500);
+                setTimeout(function() { danoobiist.say(channel3, "!train magic") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel3, "!train magic") }, 1500);
+                setTimeout(function() { noobzrange.say(channel3, "!train magic") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel3, "!train magic") }, 2500);
+                setTimeout(function() { zainab.say(channel3, "!train magic") }, 3000);
+                setTimeout(function() { noobizbot.say(channel3, "!train magic") }, 3500);
+            }
             if (message == "!ja") {
                 znoobis.say(channel3, "!join 3");
                 blm.say(channel3, "!join 3");
