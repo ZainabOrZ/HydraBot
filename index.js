@@ -19,7 +19,7 @@ const znoobis = new tmi.Client(znoobisoptions);
 znoobis.connect().catch(console.error);
 
 znoobis.on('connected', () => {
-    znoobis.say(channel1, `Noob squad is here, RavenMMO and BigTwo_02!`);
+    znoobis.say(channel1, `Noob squad is here, Raven and Fate!`);
 
 });
 
@@ -42,10 +42,12 @@ znoobis.on('message', (channel, user, message) => {
     //My Channel
     if (channel.toLowerCase() == channel1) {
 
-        if (message == "!ds") {
-            znoobis.say(channel1, "!dungeon start");
+        if (message.toLowerCase() == "!ds") {
+            noobizbot.say(channel1, "!dungeon start");
         }
-
+        if (message.startsWith(`noobizbot, You do not have any Dungeon Scrolls!`)) {
+            znoobis.say(channel1, `!dungeon start`);
+        }
         if (message.startsWith(`cartmanz_znoobis, You do not have any Dungeon Scrolls!`)) {
             blm.say(channel1, `!dungeon start`);
         }
@@ -67,7 +69,7 @@ znoobis.on('message', (channel, user, message) => {
         if (message.startsWith(`zainaborz, You do not have any Dungeon Scrolls!`)) {
             znoobis.say(channel1, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
-        if (message == "!rs") {
+        if (message.toLowerCase() == "!rs") {
             znoobis.say(channel1, "!raid start");
         }
 
@@ -92,7 +94,7 @@ znoobis.on('message', (channel, user, message) => {
         if (message.startsWith(`zainaborz, You do not have any Raid Scrolls!`)) {
             znoobis.say(channel1, `looks like you are going to have to use your own scrolls, because I'm out :(`);
         }
-        if (message == "!sa") {
+        if (message.toLowerCase() == "!sa") {
             znoobis.say(channel1, "!scrolls");
             setTimeout(function() { blm.say(channel1, "!scrolls"); }, 1500);
             setTimeout(function() { danoobiist.say(channel1, "!scrolls"); }, 2000);
@@ -102,26 +104,50 @@ znoobis.on('message', (channel, user, message) => {
             setTimeout(function() { zainab.say(channel1, "!scrolls"); }, 7000);
             setTimeout(function() { noobizbot.say(channel1, "!scrolls"); }, 9500);
         }
+        if (message.toLowerCase() == "!kaiju") {
+            znoobis.say(channel1, "!big");
+            blm.say(channel1, "!big");
+            danoobiist.say(channel1, "!big");
+            majicnoobz.say(channel1, "!big");
+            noobzrange.say(channel1, "!big");
+            sweetestcandii.say(channel1, "!big");
+            zainab.say(channel1, "!big");
+        }
+        if (message.toLowerCase() == "!tsd") {
+            znoobis.say(channel1, "!small");
+            blm.say(channel1, "!small");
+            danoobiist.say(channel1, "!small");
+            majicnoobz.say(channel1, "!small");
+            noobzrange.say(channel1, "!small");
+            sweetestcandii.say(channel1, "!small");
+            zainab.say(channel1, "!small");
+        }
 
-        if (message == "!d") {
+
+        if (message.toLowerCase() == "!d") {
             znoobis.say(channel1, "!dungeon");
         }
-        if (message == "!r") {
+        if (message.toLowerCase() == "!r") {
             znoobis.say(channel1, "!raid");
         }
 
         if (user.username == "cartmanz_znoobis") {
             if (message == "!ja") {
-                znoobis.say(channel1, "!join 2");
+                znoobis.say(channel1, "!join");
                 blm.say(channel1, "!join");
-                danoobiist.say(channel1, "!join 2");
+                danoobiist.say(channel1, "!join");
                 majicnoobz.say(channel1, "!join");
                 noobzrange.say(channel1, "!join");
                 sweetestcandii.say(channel1, "!join");
                 zainab.say(channel1, "!join");
                 noobizbot.say(channel1, "!join");
             }
-            if (message == "!tf") {
+            if (message == "!noobzstart") {
+                noobizbot.say(channel1, "!leave");
+                setTimeout(function() { noobizbot.say(channel1, "!join") }, 2500);
+                setTimeout(function() { noobizbot.say(channel1, "!sail") }, 3000);
+            }
+            if (message.toLowerCase() == "!tf") {
                 znoobis.say(channel1, "!train farming");
                 setTimeout(function() { blm.say(channel1, "!train farming") }, 500);
                 setTimeout(function() { danoobiist.say(channel1, "!train farming") }, 1000);
@@ -130,7 +156,7 @@ znoobis.on('message', (channel, user, message) => {
                 setTimeout(function() { sweetestcandii.say(channel1, "!train farming") }, 2500);
                 setTimeout(function() { zainab.say(channel1, "!train farming") }, 3000);
             }
-            if (message == "!tn") {
+            if (message.toLowerCase() == "!tn") {
                 znoobis.say(channel1, "!train all");
                 setTimeout(function() { blm.say(channel1, "!train crafting") }, 500);
                 setTimeout(function() { danoobiist.say(channel1, "!train farming") }, 1000);
@@ -139,8 +165,43 @@ znoobis.on('message', (channel, user, message) => {
                 setTimeout(function() { sweetestcandii.say(channel1, "!train healing") }, 2500);
                 setTimeout(function() { zainab.say(channel1, "!train healing") }, 3000);
             }
-        }
+            if (message.toLowerCase() == "!ra") {
+                znoobis.say(channel1, "!rest");
+                blm.say(channel1, "!rest");
+                danoobiist.say(channel1, "!rest");
+                majicnoobz.say(channel1, "!rest");
+                noobzrange.say(channel1, "!rest");
+                sweetestcandii.say(channel1, "!rest");
+                zainab.say(channel1, "!rest");
+            }
+            // Will gift a gear set with command formatting of "!giftset <receiving user> <gear set grouping>"
+            if (message.toLowerCase().startsWith(`!giftset`)) {
+                //Used to pull arguments from a message.
+                let parameters = message.split(' ').filter(n => n);
 
+                //Will gift a full set of black gear.
+                if (parameters[2] == 'starter') {
+                    blm.say(channel, `!gift ${parameters[1]} black helmet`);
+                    blm.say(channel, `!gift ${parameters[1]} black chest`);
+                    blm.say(channel, `!gift ${parameters[1]} black leggings`);
+                    blm.say(channel, `!gift ${parameters[1]} black gloves`);
+                    blm.say(channel, `!gift ${parameters[1]} black boots`);
+                    blm.say(channel, `!gift ${parameters[1]} black 2h sword`);
+                    blm.say(channel, `!gift ${parameters[1]} black bow`);
+                }
+
+
+                //Will gift a full set of lionsbane gear.
+                else if (parameters[2] == 'lionsbane') {
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane helmet`);
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane chest`);
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane leggings`);
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane gloves`);
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane boots`);
+                    blm.say(channel, `!gift ${parameters[1]} lionsbane katana`);
+                }
+            }
+        }
         if (user.username == channelbot1.toLowerCase() || user.username == "ravenfallofficial") {
             if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")) {
                 setTimeout(function() { blm.say(channel1, "!dungeon") }, 500);
@@ -193,9 +254,9 @@ znoobis.on('message', (channel, user, message) => {
         }
         if (user.username == "cartmanz_znoobis") {
             if (message == "!ja") {
-                znoobis.say(channel2, "!join");
+                znoobis.say(channel2, "!join 2");
                 blm.say(channel2, "!join 2");
-                danoobiist.say(channel2, "!join");
+                danoobiist.say(channel2, "!join 2");
                 majicnoobz.say(channel2, "!join 2");
                 noobzrange.say(channel2, "!join 2");
                 sweetestcandii.say(channel2, "!join 2");
