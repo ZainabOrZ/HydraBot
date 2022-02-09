@@ -188,8 +188,42 @@ znoobis.on('message', (channel, user, message) => {
                     blm.say(channel, `!gift ${parameters[1]} black boots`);
                     blm.say(channel, `!gift ${parameters[1]} black 2h sword`);
                     blm.say(channel, `!gift ${parameters[1]} black bow`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom Ring`);
+                    blm.say(channel, `!gift ${parameters[1]} Dragon Amulet`);
                 }
 
+                if (parameters[2] == 'purple') {
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas helmet`);
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas chest`);
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas leggings`);
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas gloves`);
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas boots`);
+                    blm.say(channel, `!gift ${parameters[1]} Abraxas 2h sword`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom Ring`);
+                    blm.say(channel, `!gift ${parameters[1]} Dragon Amulet`);
+                }
+
+                if (parameters[2] == 'white') {
+                    blm.say(channel, `!gift ${parameters[1]} Phantom helmet`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom chest`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom leggings`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom gloves`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom boots`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom 2h sword`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom Ring`);
+                    blm.say(channel, `!gift ${parameters[1]} Dragon Amulet`);
+                }
+
+                if (parameters[2] == 'jade') {
+                    blm.say(channel, `!gift ${parameters[1]} Rune helmet`);
+                    blm.say(channel, `!gift ${parameters[1]} Rune chest`);
+                    blm.say(channel, `!gift ${parameters[1]} Rune leggings`);
+                    blm.say(channel, `!gift ${parameters[1]} Rune gloves`);
+                    blm.say(channel, `!gift ${parameters[1]} Rune boots`);
+                    blm.say(channel, `!gift ${parameters[1]} Rune 2h sword`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom Ring`);
+                    blm.say(channel, `!gift ${parameters[1]} Dragon Amulet`);
+                }
 
                 //Will gift a full set of lionsbane gear.
                 else if (parameters[2] == 'lionsbane') {
@@ -199,6 +233,8 @@ znoobis.on('message', (channel, user, message) => {
                     blm.say(channel, `!gift ${parameters[1]} lionsbane gloves`);
                     blm.say(channel, `!gift ${parameters[1]} lionsbane boots`);
                     blm.say(channel, `!gift ${parameters[1]} lionsbane katana`);
+                    blm.say(channel, `!gift ${parameters[1]} Phantom Ring`);
+                    blm.say(channel, `!gift ${parameters[1]} Dragon Amulet`);
                 }
             }
         }
@@ -223,6 +259,8 @@ znoobis.on('message', (channel, user, message) => {
         }
     }
 
+
+    //These are the commands that I am using for the other two channels I play Ravenfall in. Switching channels is easy enough since it depends on the settings in the settings.json file
     //Raven Channel
     else if (channel.toLowerCase() == channel2) {
         if (message == "!d") {
@@ -324,6 +362,7 @@ znoobis.on('message', (channel, user, message) => {
     }
 });
 
+//These are the alternate account that I am usings for this bot. Each name is linked in the settings file which allows them to speak in the commands above
 const blmoptions = {
     options: { debug: true },
     connection: {
