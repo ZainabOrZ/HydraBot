@@ -19,7 +19,7 @@ const znoobis = new tmi.Client(znoobisoptions);
 znoobis.connect().catch(console.error);
 
 znoobis.on('connected', () => {
-    znoobis.say(channel1, `Noob squad is here, Raven and Fate!`);
+    znoobis.say(channel1, `Noob squad is here, RavenMMO and LuckysGameCorner!`);
 
 });
 
@@ -142,10 +142,10 @@ znoobis.on('message', (channel, user, message) => {
                 zainab.say(channel1, "!join");
                 noobizbot.say(channel1, "!join");
             }
-            if (message == "!noobzstart") {
+            if (message == "!ns") {
                 noobizbot.say(channel1, "!leave");
-                setTimeout(function() { noobizbot.say(channel1, "!join") }, 2500);
-                setTimeout(function() { noobizbot.say(channel1, "!sail") }, 3000);
+                setTimeout(function() { noobizbot.say(channel1, "!join") }, 1500);
+                setTimeout(function() { noobizbot.say(channel1, "!sail") }, 2000);
             }
             if (message.toLowerCase() == "!tf") {
                 znoobis.say(channel1, "!train farming");
@@ -173,6 +173,18 @@ znoobis.on('message', (channel, user, message) => {
                 noobzrange.say(channel1, "!rest");
                 sweetestcandii.say(channel1, "!rest");
                 zainab.say(channel1, "!rest");
+            }
+            //This will allow me to have the players sail by using !salt home, !salt away, !salt ironhill etc
+            if (message.toLowerCase().startsWith(`!salt`)) {
+                let parameters = message.split(' ').filter(n => n);
+                znoobis.say(channel1, "!sail ${parameters[1]}");
+                setTimeout(function() { blm.say(channel1, "!sail ${parameters[1]}") }, 500);
+                setTimeout(function() { danoobiist.say(channel1, "!sail ${parameters[1]}") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel1, "!sail ${parameters[1]}") }, 1500);
+                setTimeout(function() { noobzrange.say(channel1, "!sail ${parameters[1]}") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel1, "!sail ${parameters[1]}") }, 2500);
+                setTimeout(function() { zainab.say(channel1, "!sail ${parameters[1]}") }, 3000);
+                setTimeout(function() { noobizbot.say(channel1, "!sail ${parameters[1]}") }, 3500);
             }
             // Will gift a gear set with command formatting of "!giftset <receiving user> <gear set grouping>"
             if (message.toLowerCase().startsWith(`!giftset`)) {
@@ -238,6 +250,7 @@ znoobis.on('message', (channel, user, message) => {
                 }
             }
         }
+
         if (user.username == channelbot1.toLowerCase() || user.username == "ravenfallofficial") {
             if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")) {
                 setTimeout(function() { blm.say(channel1, "!dungeon") }, 500);
@@ -261,7 +274,7 @@ znoobis.on('message', (channel, user, message) => {
 
 
     //These are the commands that I am using for the other two channels I play Ravenfall in. Switching channels is easy enough since it depends on the settings in the settings.json file
-    //Raven Channel
+    //RavenMMO's Channel
     else if (channel.toLowerCase() == channel2) {
         if (message == "!d") {
             setTimeout(function() { znoobis.say(channel2, "!dungeon") }, 2000);
@@ -301,62 +314,91 @@ znoobis.on('message', (channel, user, message) => {
                 zainab.say(channel2, "!join 2");
                 noobizbot.say(channel2, "!join 2");
             }
+            if (message.toLowerCase().startsWith(`!salt`)) {
+                let parameters = message.split(' ').filter(n => n);
+                znoobis.say(channel2, "!sail ${parameters[1]}");
+                setTimeout(function() { blm.say(channel2, "!sail ${parameters[1]}") }, 500);
+                setTimeout(function() { danoobiist.say(channel2, "!sail ${parameters[1]}") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel2, "!sail ${parameters[1]}") }, 1500);
+                setTimeout(function() { noobzrange.say(channel2, "!sail ${parameters[1]}") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel2, "!sail ${parameters[1]}") }, 2500);
+                setTimeout(function() { zainab.say(channel2, "!sail ${parameters[1]}") }, 3000);
+                setTimeout(function() { noobizbot.say(channel2, "!sail ${parameters[1]}") }, 3500);
+            }
         }
     }
 
-    //BigTwo Channel
-    //BigTwo has issues where the bot does not announce that I(ZNoobis) joined raids or dungeons. Hopefully this will let my characters join just by the command
+    //LuckysGamingCorner's Channel
     else if (channel.toLowerCase() == channel3) {
         if (message == "!d") {
-            znoobis.say(channel3, "!dungeon");
-            setTimeout(function() { blm.say(channel3, "!dungeon") }, 500);
-            setTimeout(function() { danoobiist.say(channel3, "!dungeon") }, 1000);
-            setTimeout(function() { majicnoobz.say(channel3, "!dungeon") }, 1500);
-            setTimeout(function() { noobzrange.say(channel3, "!dungeon") }, 2000);
-            setTimeout(function() { sweetestcandii.say(channel3, "!dungeon") }, 2500);
-            setTimeout(function() { zainab.say(channel3, "!dungeon") }, 3000);
-            setTimeout(function() { noobizbot.say(channel3, "!dungeon") }, 3500);
+            setTimeout(function() { znoobis.say(channel3, "!dungeon") }, 2000);
         }
         if (message == "!r") {
-            znoobis.say(channel3, "!raid");
-            setTimeout(function() { blm.say(channel3, "!raid") }, 500);
-            setTimeout(function() { danoobiist.say(channel3, "!raid") }, 1000);
-            setTimeout(function() { majicnoobz.say(channel3, "!raid") }, 1500);
-            setTimeout(function() { noobzrange.say(channel3, "!raid") }, 2000);
-            setTimeout(function() { sweetestcandii.say(channel3, "!raid") }, 2500);
-            setTimeout(function() { zainab.say(channel3, "!raid") }, 3000);
-            setTimeout(function() { noobizbot.say(channel3, "!raid") }, 3500);
+            setTimeout(function() { znoobis.say(channel3, "!raid") }, 2000);
         }
-        if (user.username == "cartmanz_znoobis") {
-            if (message == "!ta") {
-                znoobis.say(channel3, "!train all");
-                setTimeout(function() { blm.say(channel3, "!train all") }, 500);
-                setTimeout(function() { danoobiist.say(channel3, "!train all") }, 1000);
-                setTimeout(function() { majicnoobz.say(channel3, "!train all") }, 1500);
-                setTimeout(function() { noobzrange.say(channel3, "!train all") }, 2000);
-                setTimeout(function() { sweetestcandii.say(channel3, "!train all") }, 2500);
-                setTimeout(function() { zainab.say(channel3, "!train all") }, 3000);
-                setTimeout(function() { noobizbot.say(channel3, "!train all") }, 3500);
+
+        if (user.username == channelbot3.toLowerCase() || user.username == "ravenfallofficial") {
+            if (message.startsWith("cartmanz_znoobis, You have joined the dungeon")) {
+                setTimeout(function() { blm.say(channel3, "!dungeon") }, 500);
+                setTimeout(function() { danoobiist.say(channel3, "!dungeon") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel3, "!dungeon") }, 1500);
+                setTimeout(function() { noobzrange.say(channel3, "!dungeon") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel3, "!dungeon") }, 2500);
+                setTimeout(function() { zainab.say(channel3, "!dungeon") }, 3000);
+                setTimeout(function() { noobizbot.say(channel3, "!dungeon") }, 3500);
             }
-            if (message == "!tm") {
-                znoobis.say(channel3, "!train magic");
-                setTimeout(function() { blm.say(channel3, "!train magic") }, 500);
-                setTimeout(function() { danoobiist.say(channel3, "!train magic") }, 1000);
-                setTimeout(function() { majicnoobz.say(channel3, "!train magic") }, 1500);
-                setTimeout(function() { noobzrange.say(channel3, "!train magic") }, 2000);
-                setTimeout(function() { sweetestcandii.say(channel3, "!train magic") }, 2500);
-                setTimeout(function() { zainab.say(channel3, "!train magic") }, 3000);
-                setTimeout(function() { noobizbot.say(channel3, "!train magic") }, 3500);
+            if (message.startsWith("cartmanz_znoobis, You have joined the raid")) {
+                setTimeout(function() { blm.say(channel3, "!raid") }, 500);
+                setTimeout(function() { danoobiist.say(channel3, "!raid") }, 1000);
+                setTimeout(function() { majicnoobz.say(channel3, "!raid") }, 1500);
+                setTimeout(function() { noobzrange.say(channel3, "!raid") }, 2000);
+                setTimeout(function() { sweetestcandii.say(channel3, "!raid") }, 2500);
+                setTimeout(function() { zainab.say(channel3, "!raid") }, 3000);
+                setTimeout(function() { noobizbot.say(channel3, "!raid") }, 3500);
             }
-            if (message == "!ja") {
-                znoobis.say(channel3, "!join 3");
-                blm.say(channel3, "!join 3");
-                danoobiist.say(channel3, "!join 3");
-                majicnoobz.say(channel3, "!join 3");
-                noobzrange.say(channel3, "!join 3");
-                sweetestcandii.say(channel3, "!join 3");
-                zainab.say(channel3, "!join 3");
-                noobizbot.say(channel3, "!join 3");
+
+            if (user.username == "cartmanz_znoobis") {
+                if (message == "!ta") {
+                    znoobis.say(channel3, "!train all");
+                    setTimeout(function() { blm.say(channel3, "!train all") }, 500);
+                    setTimeout(function() { danoobiist.say(channel3, "!train all") }, 1000);
+                    setTimeout(function() { majicnoobz.say(channel3, "!train all") }, 1500);
+                    setTimeout(function() { noobzrange.say(channel3, "!train all") }, 2000);
+                    setTimeout(function() { sweetestcandii.say(channel3, "!train all") }, 2500);
+                    setTimeout(function() { zainab.say(channel3, "!train all") }, 3000);
+                    setTimeout(function() { noobizbot.say(channel3, "!train all") }, 3500);
+                }
+                if (message == "!tm") {
+                    znoobis.say(channel3, "!train magic");
+                    setTimeout(function() { blm.say(channel3, "!train magic") }, 500);
+                    setTimeout(function() { danoobiist.say(channel3, "!train magic") }, 1000);
+                    setTimeout(function() { majicnoobz.say(channel3, "!train magic") }, 1500);
+                    setTimeout(function() { noobzrange.say(channel3, "!train magic") }, 2000);
+                    setTimeout(function() { sweetestcandii.say(channel3, "!train magic") }, 2500);
+                    setTimeout(function() { zainab.say(channel3, "!train magic") }, 3000);
+                    setTimeout(function() { noobizbot.say(channel3, "!train magic") }, 3500);
+                }
+                if (message == "!ja") {
+                    znoobis.say(channel3, "!join 3");
+                    blm.say(channel3, "!join 3");
+                    danoobiist.say(channel3, "!join 3");
+                    majicnoobz.say(channel3, "!join 3");
+                    noobzrange.say(channel3, "!join 3");
+                    sweetestcandii.say(channel3, "!join 3");
+                    zainab.say(channel3, "!join 3");
+                    noobizbot.say(channel3, "!join 3");
+                }
+                if (message.toLowerCase().startsWith(`!salt`)) {
+                    let parameters = message.split(' ').filter(n => n);
+                    znoobis.say(channel3, "!sail ${parameters[1]}");
+                    setTimeout(function() { blm.say(channel3, "!sail ${parameters[1]}") }, 500);
+                    setTimeout(function() { danoobiist.say(channel3, "!sail ${parameters[1]}") }, 1000);
+                    setTimeout(function() { majicnoobz.say(channel3, "!sail ${parameters[1]}") }, 1500);
+                    setTimeout(function() { noobzrange.say(channel3, "!sail ${parameters[1]}") }, 2000);
+                    setTimeout(function() { sweetestcandii.say(channel3, "!sail ${parameters[1]}") }, 2500);
+                    setTimeout(function() { zainab.say(channel3, "!sail ${parameters[1]}") }, 3000);
+                    setTimeout(function() { noobizbot.say(channel3, "!sail ${parameters[1]}") }, 3500);
+                }
             }
         }
     }
